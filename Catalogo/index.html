@@ -1,0 +1,411 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            PICHOCATALOGO
+        </div>
+
+        <nav class="navbar">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="carrito">
+            🛒 <span id="contador">0</span>
+        </div>
+
+    </header>
+
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">NUEVA COLECCIÓN</p>
+
+            <h1>
+                Encuentra lo que
+                <span>buscas.</span>
+            </h1>
+
+            <p>
+                Explora nuestro catálogo y descubre
+                nuestros productos.
+            </p>
+
+            <a href="#productos" class="btn">
+                Ver productos
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="productos" class="productos-section">
+
+        <div class="section-title">
+
+            <p>CATÁLOGO</p>
+
+            <h2>
+                Nuestros productos
+            </h2>
+
+        </div>
+
+
+        <div class="herramientas">
+
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar producto..."
+            >
+
+            <select id="categoria">
+
+                <option value="todos">
+                    Todas las categorías
+                </option>
+
+                <option value="ropa">
+                    Ropa
+                </option>
+
+                <option value="accesorios">
+                    Accesorios
+                </option>
+
+                <option value="calzado">
+                    Calzado
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+
+        <div id="listaProductos" class="productos">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <article
+                class="producto"
+                data-nombre="Camiseta básica"
+                data-categoria="ropa"
+            >
+
+                <div class="producto-img">
+
+                    <img
+                        src="img/producto1.jpg"
+                        alt="Camiseta básica"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <p class="categoria">
+                        ROPA
+                    </p>
+
+                    <h3>
+                        Camiseta básica
+                    </h3>
+
+                    <p>
+                        Camiseta cómoda y versátil
+                        para cualquier ocasión.
+                    </p>
+
+                    <div class="producto-bottom">
+
+                        <strong>
+                            $80.000
+                        </strong>
+
+                        <button
+                            class="btn-producto"
+                            onclick="agregarCarrito('Camiseta básica')"
+                        >
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <article
+                class="producto"
+                data-nombre="Hoodie urbano"
+                data-categoria="ropa"
+            >
+
+                <div class="producto-img">
+
+                    <img
+                        src="img/producto2.jpg"
+                        alt="Hoodie urbano"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <p class="categoria">
+                        ROPA
+                    </p>
+
+                    <h3>
+                        Hoodie urbano
+                    </h3>
+
+                    <p>
+                        Hoodie de diseño moderno
+                        y cómodo.
+                    </p>
+
+                    <div class="producto-bottom">
+
+                        <strong>
+                            $180.000
+                        </strong>
+
+                        <button
+                            class="btn-producto"
+                            onclick="agregarCarrito('Hoodie urbano')"
+                        >
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <article
+                class="producto"
+                data-nombre="Gorra clásica"
+                data-categoria="accesorios"
+            >
+
+                <div class="producto-img">
+
+                    <img
+                        src="img/producto3.jpg"
+                        alt="Gorra clásica"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <p class="categoria">
+                        ACCESORIOS
+                    </p>
+
+                    <h3>
+                        Gorra clásica
+                    </h3>
+
+                    <p>
+                        Gorra minimalista para
+                        complementar cualquier outfit.
+                    </p>
+
+                    <div class="producto-bottom">
+
+                        <strong>
+                            $65.000
+                        </strong>
+
+                        <button
+                            class="btn-producto"
+                            onclick="agregarCarrito('Gorra clásica')"
+                        >
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRODUCTO 4 -->
+
+            <article
+                class="producto"
+                data-nombre="Tenis urbanos"
+                data-categoria="calzado"
+            >
+
+                <div class="producto-img">
+
+                    <img
+                        src="img/producto4.jpg"
+                        alt="Tenis urbanos"
+                    >
+
+                </div>
+
+                <div class="producto-info">
+
+                    <p class="categoria">
+                        CALZADO
+                    </p>
+
+                    <h3>
+                        Tenis urbanos
+                    </h3>
+
+                    <p>
+                        Diseño cómodo y moderno
+                        para el día a día.
+                    </p>
+
+                    <div class="producto-bottom">
+
+                        <strong>
+                            $220.000
+                        </strong>
+
+                        <button
+                            class="btn-producto"
+                            onclick="agregarCarrito('Tenis urbanos')"
+                        >
+                            Agregar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NOSOTROS ================= -->
+
+    <section id="nosotros" class="nosotros">
+
+        <div>
+
+            <p class="small-title">
+                SOBRE NOSOTROS
+            </p>
+
+            <h2>
+                Calidad y estilo
+            </h2>
+
+            <p>
+                Somos una marca enfocada en ofrecer
+                productos de calidad, con diseños
+                actuales y una experiencia sencilla
+                para nuestros clientes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACTO ================= -->
+
+    <section id="contacto" class="contacto">
+
+        <div class="section-title">
+
+            <p>CONTACTO</p>
+
+            <h2>
+                ¿Tienes alguna pregunta?
+            </h2>
+
+        </div>
+
+        <form id="formulario">
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Nombre"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Correo electrónico"
+                required
+            >
+
+            <textarea
+                id="mensaje"
+                placeholder="Escribe tu mensaje"
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="btn"
+            >
+                Enviar mensaje
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 PichoCatalogo. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
